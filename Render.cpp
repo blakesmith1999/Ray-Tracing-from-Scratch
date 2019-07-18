@@ -117,7 +117,7 @@ void render(const std::vector<Sphere> &spheres, const std::vector<Light> &lights
   const int height = 768;
   const float fov = M_PI/3.;
   std::vector<Vec3f> framebuffer(width*height);
-
+  
   #pragma omp parallel for
   for (size_t j =0; j<height; j++) {
     for (size_t i = 0; i<width; i++) {
